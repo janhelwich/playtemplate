@@ -1,0 +1,21 @@
+-@ var body:String
+-@ var title: String = "Market"
+
+!!!5
+%link(rel="stylesheet" type="text/css" href="/assets/stylesheets/bootstrap.min.css")
+%link(rel="stylesheet" type="text/css" href="/assets/stylesheets/responsive.min.css")
+:css
+    html { height: 100% }
+    body {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+%html
+    %meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
+    %title #{title}
+    %body
+        -unescape(body)
+
+-#load js at the end to have the page displayed first thus quicker
+%script(type="text/javascript" src="assets/javascripts/jquery-1.7.1.min.js")
+%script(type="text/javascript" src="assets/javascripts/main.min.js")
