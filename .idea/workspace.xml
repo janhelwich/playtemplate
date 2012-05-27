@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8755348-4b7e-431f-9dc1-ec19690843ae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/coffee-script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/coffeejade.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/coffeejade.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/landing.scaml" afterPath="$PROJECT_DIR$/app/views/landing.scaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/god.txt" afterPath="$PROJECT_DIR$/conf/god.txt" />
     </list>
     <ignored path="trader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,37 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="god.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/conf/god.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.scaml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="map.scaml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/map.scaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="86" selection-end="219" vertical-scroll-proportion="-1.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="coffee-script.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/coffee-script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="42" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="60" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
+            <state line="2" column="51" selection-start="137" selection-end="137" vertical-scroll-proportion="0.037128713">
               <folding />
             </state>
           </provider>
@@ -650,8 +618,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -771,30 +739,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/coffee-script.js">
+    <entry file="file://$PROJECT_DIR$/conf/god.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="42" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="60" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/map.scaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="86" selection-end="219" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/default.scaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="55" selection-start="570" selection-end="589" vertical-scroll-proportion="-11.875">
+        <state line="7" column="57" selection-start="142" selection-end="142" vertical-scroll-proportion="0.12620193">
           <folding />
         </state>
       </provider>
@@ -806,9 +753,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/god.txt">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/default.scaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
+        <state line="19" column="55" selection-start="570" selection-end="589" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="38" selection-start="334" selection-end="334" vertical-scroll-proportion="0.18028846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/coffee-script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="42" selection-start="181" selection-end="181" vertical-scroll-proportion="0.12820514">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/map.scaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="51" selection-start="137" selection-end="137" vertical-scroll-proportion="0.037128713">
           <folding />
         </state>
       </provider>
