@@ -90,7 +90,7 @@
       <file leaf-file-name="map.scaml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/map.scaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="51" selection-start="137" selection-end="137" vertical-scroll-proportion="0.037128713">
+            <state line="3" column="0" selection-start="219" selection-end="219" vertical-scroll-proportion="0.055693068">
               <folding />
             </state>
           </provider>
@@ -776,7 +776,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/map.scaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="51" selection-start="137" selection-end="137" vertical-scroll-proportion="0.037128713">
+        <state line="3" column="0" selection-start="219" selection-end="219" vertical-scroll-proportion="0.055693068">
           <folding />
         </state>
       </provider>
