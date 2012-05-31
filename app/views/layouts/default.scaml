@@ -16,6 +16,11 @@
     %body
         -unescape(body)
 
--#load js at the end to have the page displayed first thus quicker
-%script(type="text/javascript" src="assets/javascripts/jquery-1.7.1.min.js")
+%script(type="text/javascript" src="assets/javascripts/zepto.min.js")
 %script(type="text/javascript" src="assets/javascripts/main.min.js")
+:javascript
+    Zepto(function($){
+        $('#toswipe').swipeRight(function(){
+          alert("yeah")
+        })
+    })

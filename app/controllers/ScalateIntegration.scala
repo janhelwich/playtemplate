@@ -6,7 +6,7 @@ import mvc.Codec
 import play.api.Play.current
 import org.fusesource.scalate.layout.DefaultLayoutStrategy
 
-object Scalate {
+object render {
 
   import org.fusesource.scalate._
   import org.fusesource.scalate.util._
@@ -27,15 +27,17 @@ object Scalate {
     engine
   }
 
-  def apply(template: String) = Template(template)
+  def apply(template: String, args: (Symbol, Any)*) = Template(template).render(
+                                                        args.map {
+                                                          case (k, v) => k.name -> v
+                                                        } toMap
+                                                      )
 
   case class Template(name: String) {
 
-    def render(args: (Symbol, Any)*) = {
+    def render(attributes : scala.Predef.Map[scala.Predef.String, scala.Any]) = {
       ScalateContent {
-        scalateEngine.layout(name, args.map {
-          case (k, v) => k.name -> v
-        } toMap)
+        scalateEngine.layout(name, attributes)
       }
     }
 

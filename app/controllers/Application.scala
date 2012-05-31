@@ -7,11 +7,15 @@ object Application extends Controller {
   
   def index = Action {
 //    Ok(views.html.index("Your new application is ready."))
-    Ok(Scalate("landing.scaml").render())
+    Ok(render("landing.scaml"))
   }
 
   def map = Action {
-    Ok( Scalate("map.scaml").render())
+    Ok( render("map.scaml"))
+  }
+
+  def mobile = Action {
+    Ok( render("mobile.scaml"))
   }
 
 }
