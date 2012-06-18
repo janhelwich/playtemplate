@@ -1,4 +1,10 @@
-This is your new Play 2.0 application
-=====================================
+This is a Play 2.0 application template
+=======================================
 
-This file will be packaged with your application, when using `play dist`.
+Intention is to provide a template for a Play 2! application. It should provide examplary code and technologies to
+setup a new application quickly. This includes but is not limited to:
+
+- persistence in mongo
+- bootstrap integration via LESS
+- Scalate(Scaml) integration
+- basic authorization and authentication mechanisms
