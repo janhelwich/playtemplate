@@ -5,7 +5,7 @@ import com.mojolly.scalate.ScalatePlugin._
 
 object ApplicationBuild extends Build {
 
-    val appName         = "trader"
+    val appName         = "template"
     val appVersion      = "1.0-SNAPSHOT"
 
     val appDependencies = Seq(
