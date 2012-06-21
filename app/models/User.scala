@@ -10,7 +10,11 @@ object User extends MongoDao{
   val dao = new SalatDAO[User, ObjectId](collection("users")){}
 
   def find(x:String) = {
-    dao.find(MongoDBObject.empty).toList.head
+    dao.find(ref = MongoDBObject("name" -> x))
+      .sort(orderBy = MongoDBObject("name" -> -1)) // sort by _id desc
+      .skip(1)
+      .limit(1)
+      .toList
   }
 
   def findAll = dao.find(MongoDBObject.empty).toList

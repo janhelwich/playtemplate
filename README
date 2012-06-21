@@ -6,8 +6,9 @@ setup a new application quickly. This includes but is not limited to:
 
 + Scalate(Scaml) integration
 + bootstrap integration via LESS
-- persistence in mongo
++ differentiat between mobile and desktop clients
++ persistence in mongo
 - basic authorization and authentication mechanisms
-- differentiat between mobile and desktop clients
-
-enabled to deploy to heroku and build wars
+- basic means for A/B testing
+- enabled to deploy to heroku
+- and build wars
