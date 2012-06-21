@@ -3,13 +3,14 @@ package models
 import play.api.Play
 import java.net.URI
 import com.mongodb.casbah.MongoConnection
-import com.novus.salat.dao.SalatDAO
 import com.mongodb.casbah.Imports._
+import play.api.Play.current
 import scala.Some
+import com.novus.salat.global._
 
-trait MongoDao[E] {
+trait MongoDao {
   val dbname:String = "default"
-  val db = {
+  lazy val db = {
     Play.configuration.getString("mongo.uri") match {
       case Some(uriTxt) => {
         val uri = new URI(uriTxt)
@@ -21,5 +22,8 @@ trait MongoDao[E] {
       case _ => MongoConnection()(dbname)
     }
   }
-  val dao = new SalatDAO[E, ObjectId](collection = db.getCollection("pics").asScala) {}
+
+  implicit val mctx: com.novus.salat.Context = ctx
+
+  def collection(name:String) = db.getCollection(name).asScala
 }
