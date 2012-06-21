@@ -8,6 +8,7 @@ import play.api.Play.current
 import scala.Some
 import com.novus.salat.global._
 
+
 trait MongoDao {
   val dbname:String = "default"
   lazy val db = {
