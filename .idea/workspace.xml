@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8755348-4b7e-431f-9dc1-ec19690843ae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/MBPi5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/MongoDao.scala" afterPath="$PROJECT_DIR$/app/models/MongoDao.scala" />
     </list>
     <ignored path="trader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,7 +72,7 @@
       <file leaf-file-name="MongoDao.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/MongoDao.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="44" selection-start="772" selection-end="772" vertical-scroll-proportion="0.6830601">
+            <state line="22" column="5" selection-start="722" selection-end="722" vertical-scroll-proportion="0.6010929">
               <folding>
                 <element signature="e#16#36#0" expanded="true" />
               </folding>
@@ -779,7 +775,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/MongoDao.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="44" selection-start="772" selection-end="772" vertical-scroll-proportion="0.6830601">
+        <state line="22" column="5" selection-start="722" selection-end="722" vertical-scroll-proportion="0.6010929">
           <folding>
             <element signature="e#16#36#0" expanded="true" />
           </folding>
