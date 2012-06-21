@@ -4,7 +4,10 @@ This is a Play 2.0 application template
 Intention is to provide a template for a Play 2! application. It should provide examplary code and technologies to
 setup a new application quickly. This includes but is not limited to:
 
++ Scalate(Scaml) integration
++ bootstrap integration via LESS
 - persistence in mongo
-- bootstrap integration via LESS
-- Scalate(Scaml) integration
 - basic authorization and authentication mechanisms
+- differentiat between mobile and desktop clients
+
+enabled to deploy to heroku and build wars
