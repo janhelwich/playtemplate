@@ -23,7 +23,7 @@ trait MongoDao {
     }
   }
 
-  implicit val mctx: com.novus.salat.Context = ctx
+  implicit val ctxToAvoidImportOfSalatGlobal: com.novus.salat.Context = ctx
 
   def collection(name:String) = db.getCollection(name).asScala
 }
