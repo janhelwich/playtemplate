@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a8755348-4b7e-431f-9dc1-ec19690843ae" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/landing.scaml" afterPath="$PROJECT_DIR$/app/views/landing.scaml" />
     </list>
     <ignored path="trader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -659,7 +658,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="first mobile user agent recog" />
+    <option name="LAST_COMMIT_MESSAGE" value="small change" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -679,6 +678,7 @@
     <MESSAGE value="added Proc for heroku" />
     <MESSAGE value="first Mongo Impl" />
     <MESSAGE value="first mobile user agent recog" />
+    <MESSAGE value="small change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
