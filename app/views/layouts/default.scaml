@@ -1,5 +1,5 @@
 -@ var body:String
--@ var title: String = "Market"
+-@ var title: String = "Template"
 
 !!!5
 %link(rel="stylesheet" type="text/css" href="/assets/stylesheets/bootstrap.min.css")
@@ -16,11 +16,12 @@
     %body
         -unescape(body)
 
-%script(type="text/javascript" src="assets/javascripts/zepto.min.js")
+%script(type="text/javascript" src="assets/javascripts/jquery-1.7.1.min.js")
+-#%script(type="text/javascript" src="assets/javascripts/zepto.min.js")
 %script(type="text/javascript" src="assets/javascripts/main.min.js")
-:javascript
-    Zepto(function($){
-        $('#toswipe').swipeRight(function(){
-          alert("yeah")
-        })
-    })
+-#:javascript
+-#    Zepto(function($){
+-#        $('#toswipe').swipeRight(function(){
+-#          alert("yeah")
+//        })
+//    })
