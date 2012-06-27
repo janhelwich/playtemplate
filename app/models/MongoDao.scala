@@ -10,7 +10,7 @@ import com.novus.salat.global._
 
 
 trait MongoDao {
-  val dbname:String = "default"
+  val defaultDbName:String = "default"
   lazy val db = {
     Play.configuration.getString("mongo.uri") match {
       case Some(uriTxt) => {
@@ -20,7 +20,7 @@ trait MongoDao {
         if (!db.authenticate(user_pwd(0), user_pwd(1))) throw new Exception("No authorization in mongoDb")
         else db
       }
-      case _ => MongoConnection()(dbname)
+      case _ => MongoConnection()(defaultDbName)
     }
   }
 

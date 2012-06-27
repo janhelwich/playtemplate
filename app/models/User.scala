@@ -6,7 +6,7 @@ import com.novus.salat.dao.SalatDAO
 case class User(val name:String, _id: ObjectId = new ObjectId)
 
 object User extends MongoDao{
-  override val dbname = "optionaldbname"
+  override val defaultDbName = "optionaldbname"
   val dao = new SalatDAO[User, ObjectId](collection("users")){}
 
   def find(x:String) = {
