@@ -11,7 +11,7 @@ object User extends MongoDao{
 
   def find(x:String) = {
     dao.find(ref = MongoDBObject("name" -> x))
-      .sort(orderBy = MongoDBObject("name" -> -1)) // sort by _id desc
+      .sort(orderBy = MongoDBObject("name" -> -1)) // sort by name desc
       .skip(1)
       .limit(1)
       .toList
