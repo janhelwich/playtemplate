@@ -8,7 +8,7 @@ setup a new application quickly. This includes but is not limited to:
 + bootstrap integration via LESS
 + differentiat between mobile and desktop clients
 + persistence in mongo
++ enabled to deploy to heroku
 - basic authorization and authentication mechanisms
 - basic means for A/B testing
-- enabled to deploy to heroku
 - and build wars
