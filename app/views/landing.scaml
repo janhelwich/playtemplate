@@ -1,6 +1,12 @@
+-@val code:String
+- val facebookUrl = "https://www.facebook.com/dialog/oauth?client_id=263228610445079&redirect_uri=http://janstest.de:9000/&scope=email&state=JANSTEST_ARBITRARY_BUT_UNIQUE_STRING"
 %div.header
     %div.container
         %a.brand Market - your local marketplace
+        %div.fb-login-button
+            %a.fb_button.fb_button_medium(href="#{facebookUrl}")
+                %span.fb_button_text Login with Facebook
+
 %div.container
     %div.row
         %div.span8.well
@@ -8,15 +14,15 @@
                 %div.span2
                     %img(src="/assets/images/pic.jpg")
                 %div.span4
-                    %h3 Kewl thing
+                    %h3 #{code} Kewl thing
                     %p
                         really kewl as u can see
                         %br more bla bla
                         and even more of this crapy stuff
                     %p
                     %h4 price: 43
-                %div.span2
-                    %iframe.thumbnail(src="/map" width='100%')
+                -#%div.span2
+                    -#%iframe.thumbnail(src="/map" width='100%')
 
 //%script(type="text/javascript" src="assets/javascripts/coffee-script.js")
 //%script(type="text/javascript" src="assets/javascripts/coffeejade.js")

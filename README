@@ -1,6 +1,7 @@
 This is a Play 2.0 application template
 =======================================
 
+Important: Works only with Play 2.0.2 right now!
 Intention is to provide a template for a Play 2! application. It should provide examplary code and technologies to
 setup a new application quickly. This includes but is not limited to:
 
