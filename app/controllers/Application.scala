@@ -14,19 +14,36 @@ import java.awt.image.AffineTransformOp
 import actors.threadpool.locks.ReentrantReadWriteLock.Sync
 
 object Application extends Controller {
-  
+  val facebookConnectClientUrl = "https://www.facebook.com/dialog/oauth?client_id=263228610445079&redirect_uri=http://janstest.de:9000/facebookauth&scope=email&state=JANSTEST_ARBITRARY_BUT_UNIQUE_STRING_TEMP_TILL_GENERATED_AND_CHECKED"
+  val facebookOauthTokenRequestUrl = "https://graph.facebook.com/oauth/access_token?client_id=263228610445079&redirect_uri=http://janstest.de:9000/facebookauth&client_secret=43f277d0887bf5bb1691d7326e0f2053&code="
+  val facebookOathTokenParseRegex = "access_token=(.*)\\&expires=".r
+  val facebookGraphUrl = "https://graph.facebook.com/me?access_token="
+
   def index() = Action { implicit request =>
-    val code = request.queryString("code").head
-    val x = WS.url("https://graph.facebook.com/oauth/access_token?client_id=263228610445079&redirect_uri=http://janstest.de:9000/&client_secret=43f277d0887bf5bb1691d7326e0f2053&code=" + code
-    ).get().value.get
-//    { response =>
-//      Ok("Feed title: " + (response.json).as[String])
-//    }
-    Ok(render("landing.scaml", ('code, x.body)))
+    if(session.get("user").isEmpty){
+      Redirect(facebookConnectClientUrl)
+    } else {
+      Ok(render("landing.scaml", ('facebookUrl, facebookConnectClientUrl))).withNewSession
+    }
   }
 
   def map = Action {
-    Ok( render("map.scaml"))
+    Ok(render("map.scaml"))
+  }
+
+  def facebookauth = Action { implicit request =>
+    if(request.queryString.contains("code")){
+      val code = request.queryString("code").head
+      val fbOathResult = WS.url(facebookOauthTokenRequestUrl + code).get().value.get.body
+      val matchOfFBAuth = facebookOathTokenParseRegex.findFirstMatchIn(fbOathResult)
+      val oauthToken = matchOfFBAuth.get.subgroups(0)
+      println(oauthToken)
+      val basicInfo = WS.url(facebookGraphUrl + oauthToken).get().value.get.body
+      println(basicInfo)
+      Redirect("http://janstest.de:9000").withSession(("user", basicInfo))
+    } else {
+      Unauthorized("Please grant access to our app")
+    }
   }
 
   def mobile = Action { implicit request =>
