@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/template.iml" filepath="$PROJECT_DIR$/template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/template-build.iml" filepath="$PROJECT_DIR$/.idea_modules/template-build.iml" ></module>
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/template.iml" filepath="$PROJECT_DIR$/.idea_modules/template.iml" ></module>
     </modules>
   </component>
 </project>
-

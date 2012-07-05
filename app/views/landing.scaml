@@ -1,7 +1,9 @@
 -@val facebookUrl:String = ""
+-@val name:String = ""
 %div.header
     %div.container
         %a.brand Market - your local marketplace
+        %a Hello #{name}
         %div.fb-login-button
             %a.fb_button.fb_button_medium(href="#{facebookUrl}")
                 %span.fb_button_text Login with Facebook

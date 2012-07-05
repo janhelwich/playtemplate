@@ -12,6 +12,7 @@ import java.awt.geom.AffineTransform
 import java.awt.RenderingHints
 import java.awt.image.AffineTransformOp
 import actors.threadpool.locks.ReentrantReadWriteLock.Sync
+import com.codahale.jerkson._
 
 object Application extends Controller {
   val facebookConnectClientUrl = "https://www.facebook.com/dialog/oauth?client_id=263228610445079&redirect_uri=http://janstest.de:9000/facebookauth&scope=email&state=JANSTEST_ARBITRARY_BUT_UNIQUE_STRING_TEMP_TILL_GENERATED_AND_CHECKED"
@@ -23,7 +24,7 @@ object Application extends Controller {
     if(session.get("user").isEmpty){
       Redirect(facebookConnectClientUrl)
     } else {
-      Ok(render("landing.scaml", ('facebookUrl, facebookConnectClientUrl))).withNewSession
+      Ok(render("landing.scaml", ('facebookUrl, facebookConnectClientUrl), ('name, session.get("user").get))).withNewSession
     }
   }
 
@@ -39,8 +40,9 @@ object Application extends Controller {
       val oauthToken = matchOfFBAuth.get.subgroups(0)
       println(oauthToken)
       val basicInfo = WS.url(facebookGraphUrl + oauthToken).get().value.get.body
-      println(basicInfo)
-      Redirect("http://janstest.de:9000").withSession(("user", basicInfo))
+      val result = Json.parse[Map[String, String]](basicInfo)
+      println(result)
+      Redirect("http://janstest.de:9000").withSession(("user", result("name")))
     } else {
       Unauthorized("Please grant access to our app")
     }
