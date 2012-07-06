@@ -44,7 +44,7 @@ object Application extends Controller {
       println(result)
       Redirect("http://janstest.de:9000").withSession(("user", result("name")))
     } else {
-      Unauthorized("Please grant access to our app")
+      Unauthorized("Please grant access to our app via facebook")
     }
   }
 

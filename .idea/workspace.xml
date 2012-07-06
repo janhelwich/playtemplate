@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8755348-4b7e-431f-9dc1-ec19690843ae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.scala" afterPath="$PROJECT_DIR$/app/controllers/Application.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/landing.scaml" afterPath="$PROJECT_DIR$/app/views/landing.scaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/Build.scala" afterPath="$PROJECT_DIR$/project/Build.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/plugins.sbt" afterPath="$PROJECT_DIR$/project/plugins.sbt" />
     </list>
     <ignored path="trader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -78,10 +73,19 @@
       <file leaf-file-name="Application.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="3" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.2014652">
+            <state line="46" column="50" selection-start="2114" selection-end="2114" vertical-scroll-proportion="0.84249085">
               <folding>
                 <element signature="e#21#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Security.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Security.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,8 +149,8 @@
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/project/plugins.sbt" />
         <option value="$PROJECT_DIR$/project/Build.scala" />
-        <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
         <option value="$PROJECT_DIR$/app/views/landing.scaml" />
+        <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
       </list>
     </option>
   </component>
@@ -805,13 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Security.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="89" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Applications/play-2.0/repository/cache/org.fusesource.scalate/scalate-util/bundles/scalate-util-1.5.3.jar!/org/fusesource/scalate/util/FileResourceLoader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="29" selection-start="65" selection-end="65" vertical-scroll-proportion="0.030674847">
@@ -887,9 +884,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Security.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="3" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.2014652">
+        <state line="46" column="50" selection-start="2114" selection-end="2114" vertical-scroll-proportion="0.84249085">
           <folding>
             <element signature="e#21#38#0" expanded="true" />
           </folding>
