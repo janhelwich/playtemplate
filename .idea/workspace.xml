@@ -73,8 +73,10 @@
       <file leaf-file-name="Application.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.6593407">
-              <folding />
+            <state line="51" column="2" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.12576313">
+              <folding>
+                <element signature="e#21#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +84,7 @@
       <file leaf-file-name="Action.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Action.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="7" selection-start="3450" selection-end="3450" vertical-scroll-proportion="0.0">
+            <state line="140" column="67" selection-start="3207" selection-end="3207" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -741,11 +743,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Applications/play-2.0/repository/local/com.codahale/jerkson_2.9.1/0.5.0/jars/jerkson_2.9.1.jar!/com/codahale/jerkson/Parser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="186" selection-end="186" vertical-scroll-proportion="0.09677419" />
-      </provider>
-    </entry>
     <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/jars/play_2.9.1.jar!/play/api/mvc/Security.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="6" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" />
@@ -827,17 +824,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/libs/iteratee/Iteratee.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="6" selection-start="5672" selection-end="5672" vertical-scroll-proportion="0.021978023">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Action.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="7" selection-start="3450" selection-end="3450" vertical-scroll-proportion="0.0">
+        <state line="140" column="67" selection-start="3207" selection-end="3207" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.6593407">
-          <folding />
+        <state line="51" column="2" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.12576313">
+          <folding>
+            <element signature="e#21#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

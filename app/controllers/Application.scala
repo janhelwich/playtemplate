@@ -6,7 +6,6 @@ import play.api.mvc._
 import com.codahale.jerkson._
 import collection.immutable.ListMap
 import scala.Predef._
-import controllers.UserAgentOf
 
 trait FacebookAuth extends Controller{
   val facebookClientId:String
@@ -21,17 +20,17 @@ trait FacebookAuth extends Controller{
   //TODO scope params
   //TODO results+token in block übergeben
 
-  def facebookRedirectAfterLogin(
-                                onFail: => Result
-                          )(callback: FacebookAuthResult  => Result): Action[AnyContent] = Action { implicit request =>
-    if(request.queryString.contains("code")){
-      val codeFromFB = request.queryString("code").head
-      val oauthToken = callFBforOauthTokenImmediatly(codeFromFB)
-      callback(new FacebookAuthResult(oauthToken))
-    } else {
-      onFail
-    }
-  }
+//  def facebookRedirectAfterLogin(
+//                                onFail: => Result
+//                          )(callback: FacebookAuthResult  => Result): Action[AnyContent] = Action { implicit request =>
+//    if(request.queryString.contains("code")){
+//      val codeFromFB = request.queryString("code").head
+//      val oauthToken = callFBforOauthTokenImmediatly(codeFromFB)
+//      callback(new FacebookAuthResult(oauthToken))
+//    } else {
+//      onFail
+//    }
+//  }
 
   def callFBforOauthTokenImmediatly(codeFromFB: String): String = {
     val fbOathResult = WS.url(facebookOauthTokenRequestUrl + codeFromFB).get.value.get.body
@@ -46,7 +45,21 @@ trait FacebookAuth extends Controller{
     }
   }
 
+  def onSuccess(callback: FacebookAuthResult  => Result): FacebookAuthFailImpl = {
+    new FacebookAuthFailImpl(callback)
+  }
 
+  class FacebookAuthFailImpl(val callback: FacebookAuthResult  => Result){
+    def onFail(onFail: => Result): Action[AnyContent] = Action { implicit request =>
+      if(request.queryString.contains("code")){
+        val codeFromFB = request.queryString("code").head
+        val oauthToken = callFBforOauthTokenImmediatly(codeFromFB)
+        callback(new FacebookAuthResult(oauthToken))
+      } else {
+        onFail
+      }
+    }
+  }
 
 }
 
@@ -63,12 +76,12 @@ object Application extends Controller with FacebookAuth {
     }
   }
 
-  def facebookauth = facebookRedirectAfterLogin(
-    Unauthorized("Please grant access to our app via facebook")
-  ){ result =>
+  def facebookauth = onSuccess{ result =>
     println("YEAAAAHHH " + result.token)
     Redirect("http://janstest.de:9000").withSession(("user", result.graphResult("name")))
-  }
+  } onFail (
+    Unauthorized("Please grant access to our app via facebook")
+  )
 
   def map = Action {
     Ok(render("map.scaml"))
