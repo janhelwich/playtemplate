@@ -18,19 +18,6 @@ trait FacebookAuth extends Controller{
   lazy val facebookGraphUrl = "https://graph.facebook.com/me?access_token="
 
   //TODO scope params
-  //TODO results+token in block übergeben
-
-//  def facebookRedirectAfterLogin(
-//                                onFail: => Result
-//                          )(callback: FacebookAuthResult  => Result): Action[AnyContent] = Action { implicit request =>
-//    if(request.queryString.contains("code")){
-//      val codeFromFB = request.queryString("code").head
-//      val oauthToken = callFBforOauthTokenImmediatly(codeFromFB)
-//      callback(new FacebookAuthResult(oauthToken))
-//    } else {
-//      onFail
-//    }
-//  }
 
   def callFBforOauthTokenImmediatly(codeFromFB: String): String = {
     val fbOathResult = WS.url(facebookOauthTokenRequestUrl + codeFromFB).get.value.get.body
