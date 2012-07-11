@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8755348-4b7e-431f-9dc1-ec19690843ae" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/FacebookAuth.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.scala" afterPath="$PROJECT_DIR$/app/controllers/Application.scala" />
     </list>
@@ -73,9 +74,20 @@
       <file leaf-file-name="Application.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="0" selection-start="2299" selection-end="2299" vertical-scroll-proportion="0.3956044">
+            <state line="4" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.072115384">
               <folding>
                 <element signature="e#21#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FacebookAuth.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/FacebookAuth.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="27" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#21#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/MongoDao.scala" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/app/views/mobile.scaml" />
         <option value="$PROJECT_DIR$/app/models/User.scala" />
@@ -124,6 +135,7 @@
         <option value="$PROJECT_DIR$/app/models/HerokuCompatibles.scala" />
         <option value="$PROJECT_DIR$/app/controllers/HerokuCompatibles.scala" />
         <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
+        <option value="$PROJECT_DIR$/app/controllers/FacebookAuth.scala" />
       </list>
     </option>
   </component>
@@ -480,11 +492,11 @@
       <recent name="$PROJECT_DIR$/app/assets/stylesheets/bootstrap" />
       <recent name="$PROJECT_DIR$/app/assets" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="controllers" />
     </key>
   </component>
   <component name="RunManager" selected="Remote.play debug">
@@ -743,11 +755,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/jars/play_2.9.1.jar!/play/api/mvc/Security.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Security.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="23" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.56850964" />
@@ -838,9 +845,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/FacebookAuth.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="27" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="2299" selection-end="2299" vertical-scroll-proportion="0.3956044">
+        <state line="4" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.072115384">
           <folding>
             <element signature="e#21#38#0" expanded="true" />
           </folding>
