@@ -5,12 +5,13 @@ import libs.ws.WS
 import play.api.mvc._
 import com.codahale.jerkson._
 import collection.immutable.ListMap
+import scala.Predef._
+import controllers.UserAgentOf
 
 trait FacebookAuth extends Controller{
   val facebookClientId:String
   val facebookClientSecret:String
   val uriToRedirectFromFacebook:String
-  private var results: Map[String, String] = new ListMap[String, String]
 
   lazy val facebookConnectClientUrl = "https://www.facebook.com/dialog/oauth?client_id="+facebookClientId+"&redirect_uri="+uriToRedirectFromFacebook+"&scope=email&state=JANSTEST_ARBITRARY_BUT_UNIQUE_STRING_TEMP_TILL_GENERATED_AND_CHECKED"
   lazy val facebookOauthTokenRequestUrl = "https://graph.facebook.com/oauth/access_token?client_id="+facebookClientId+"&redirect_uri="+uriToRedirectFromFacebook+"&client_secret="+facebookClientSecret+"&code="
@@ -21,24 +22,15 @@ trait FacebookAuth extends Controller{
   //TODO results+token in block übergeben
 
   def facebookRedirectAfterLogin(
-                                  onSuccess: => Result,
-                                  onFail: => Result,
-                                  tokenCallback: String => Unit = (x:String) => Unit): Action[AnyContent] =
-  Action { implicit request =>
+                                onFail: => Result
+                          )(callback: FacebookAuthResult  => Result): Action[AnyContent] = Action { implicit request =>
     if(request.queryString.contains("code")){
       val codeFromFB = request.queryString("code").head
       val oauthToken = callFBforOauthTokenImmediatly(codeFromFB)
-      tokenCallback(oauthToken)
-      results = readGraphForTokenImmediatly(oauthToken)
-      onSuccess
+      callback(new FacebookAuthResult(oauthToken))
     } else {
       onFail
     }
-  }
-
-  def readGraphForTokenImmediatly(oauthToken: String) = {
-    val basicInfo = WS.url(facebookGraphUrl + oauthToken).get.value.get.body
-    Json.parse[Map[String, String]](basicInfo)
   }
 
   def callFBforOauthTokenImmediatly(codeFromFB: String): String = {
@@ -47,7 +39,15 @@ trait FacebookAuth extends Controller{
     matchOfFBAuth.get.subgroups(0)
   }
 
-  def userField(fieldName:String) = results(fieldName)
+  case class FacebookAuthResult(val token:String){
+    lazy val graphResult = {
+      val basicInfo = WS.url(facebookGraphUrl + token).get.value.get.body
+      Json.parse[Map[String, String]](basicInfo)
+    }
+  }
+
+
+
 }
 
 object Application extends Controller with FacebookAuth {
@@ -64,10 +64,11 @@ object Application extends Controller with FacebookAuth {
   }
 
   def facebookauth = facebookRedirectAfterLogin(
-    Redirect("http://janstest.de:9000").withSession(("user", userField("name"))),
-    Unauthorized("Please grant access to our app via facebook"),
-    (token: String) => println("YEAAAAHHH " + token)
-  )
+    Unauthorized("Please grant access to our app via facebook")
+  ){ result =>
+    println("YEAAAAHHH " + result.token)
+    Redirect("http://janstest.de:9000").withSession(("user", result.graphResult("name")))
+  }
 
   def map = Action {
     Ok(render("map.scaml"))

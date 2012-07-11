@@ -73,7 +73,16 @@
       <file leaf-file-name="Application.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="5" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.43223444">
+            <state line="48" column="0" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.6593407">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Action.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Action.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="150" column="7" selection-start="3450" selection-end="3450" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -648,6 +657,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32945284" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32945284" sideWeight="0.497552" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39813736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32945284" sideWeight="0.49816403" order="1" side_tool="true" content_ui="tabs" />
@@ -658,12 +668,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.24479803" sideWeight="0.23748545" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24357405" sideWeight="0.6018626" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24357405" sideWeight="0.6705471" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32945284" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -788,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Action.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="24" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Applications/play-2.0/framework/sbt/boot/scala-2.9.1/lib/scala-library.jar!/scala/annotation/implicitNotFound.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="28" selection-start="53" selection-end="53" vertical-scroll-proportion="0.028625954">
@@ -825,9 +827,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Action.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="7" selection-start="3450" selection-end="3450" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.43223444">
+        <state line="48" column="0" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.6593407">
           <folding />
         </state>
       </provider>
