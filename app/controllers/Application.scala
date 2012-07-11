@@ -1,7 +1,10 @@
 package controllers
 
+import auth.FacebookAuth
 import play.api._
 import mvc._
+import scalate.render
+import useragent.UserAgentOf
 
 object Application extends Controller with FacebookAuth {
   val uriToRedirectFromFacebook = "http://janstest.de:9000/facebookauth"

@@ -55,7 +55,7 @@
 //
 // *******************************************
  */
-package controllers;
+package controllers.useragent;
 
 /**
  * The DetectSmartPhone class encapsulates information about

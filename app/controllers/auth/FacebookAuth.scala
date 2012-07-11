@@ -1,4 +1,4 @@
-package controllers
+package controllers.auth
 
 import play.api.mvc.{Action, Result, Controller}
 import play.api.libs.ws.WS
@@ -21,7 +21,7 @@ trait FacebookAuth extends Controller {
     matchOfFBAuth.get.subgroups(0)
   }
 
-  case class AuthResult()
+  class AuthResult()
 
   case class Success(val token: String) extends AuthResult() {
     lazy val graphResult = {

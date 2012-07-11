@@ -1,4 +1,4 @@
-package controllers
+package controllers.scalate
 
 import play.api._
 import http.{Writeable, ContentTypeOf, ContentTypes}
@@ -28,14 +28,14 @@ object render {
   }
 
   def apply(template: String, args: (Symbol, Any)*) = Template(template).render(
-                                                        args.map {
-                                                          case (k, v) => k.name -> v
-                                                        } toMap
-                                                      )
+    args.map {
+      case (k, v) => k.name -> v
+    } toMap
+  )
 
   case class Template(name: String) {
 
-    def render(attributes : scala.Predef.Map[scala.Predef.String, scala.Any]) = {
+    def render(attributes: scala.Predef.Map[scala.Predef.String, scala.Any]) = {
       ScalateContent {
         scalateEngine.layout(name, attributes)
       }
