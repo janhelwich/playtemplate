@@ -3,15 +3,6 @@ package controllers
 import play.api._
 import libs.ws.WS
 import play.api.mvc._
-import models.User
-import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
-import javax.imageio.ImageIO
-import java.net.URL
-import com.sun.image.codec.jpeg.JPEGCodec
-import java.awt.geom.AffineTransform
-import java.awt.RenderingHints
-import java.awt.image.AffineTransformOp
-import actors.threadpool.locks.ReentrantReadWriteLock.Sync
 import com.codahale.jerkson._
 
 object Application extends Controller {
@@ -38,10 +29,8 @@ object Application extends Controller {
       val fbOathResult = WS.url(facebookOauthTokenRequestUrl + code).get().value.get.body
       val matchOfFBAuth = facebookOathTokenParseRegex.findFirstMatchIn(fbOathResult)
       val oauthToken = matchOfFBAuth.get.subgroups(0)
-      println(oauthToken)
       val basicInfo = WS.url(facebookGraphUrl + oauthToken).get().value.get.body
       val result = Json.parse[Map[String, String]](basicInfo)
-      println(result)
       Redirect("http://janstest.de:9000").withSession(("user", result("name")))
     } else {
       Unauthorized("Please grant access to our app via facebook")
@@ -55,26 +44,4 @@ object Application extends Controller {
       Ok(render("landing.scaml"))
   }
 
-  def newImage = Action { implicit request =>
-    val baos = new ByteArrayOutputStream()
-    val another = new ByteArrayOutputStream()
-    ImageIO.write(ImageIO.read(new URL("theurl")), "jpg", another)
-
-    val decoder = JPEGCodec.createJPEGDecoder(new ByteArrayInputStream(another.toByteArray))
-    val srcImg = decoder.decodeAsBufferedImage()
-
-    val af = AffineTransform.getScaleInstance(1.0, 1.4)
-    val rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON)
-
-    val transform = new AffineTransformOp(af,rh)
-
-    val destImg = transform.createCompatibleDestImage(srcImg, srcImg.getColorModel())
-    transform.filter(srcImg, destImg)
-
-    val encoder = JPEGCodec.createJPEGEncoder(baos, JPEGCodec.getDefaultJPEGEncodeParam(destImg))
-
-    encoder.encode(destImg)
-
-    Ok(baos.toByteArray).as("image/jpeg")
-  }
 }
