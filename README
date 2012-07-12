@@ -10,6 +10,4 @@ setup a new application quickly. This includes but is not limited to:
 + differentiat between mobile and desktop clients
 + persistence in mongo
 + enabled to deploy to heroku
-- basic authorization and authentication mechanisms
-- basic means for A/B testing
-- and build wars
++ basic auth with facebook
