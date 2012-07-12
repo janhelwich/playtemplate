@@ -1,32 +1,34 @@
 -@val facebookUrl:String = ""
 -@val name:String = ""
 %div.header
-    %div.container
-        %a.brand Market - your local marketplace
-        - if(name.isEmpty){
-            %div.fb-login-button
-                %a.fb_button.fb_button_medium(href="#{facebookUrl}")
-                    %span.fb_button_text Login with Facebook
-        - }else {
-            %a Hello #{name}
-        - }
+  %div.container
+    %a.brand Market - your local marketplace
+    %div.btn-group
+      - if(name.isEmpty){
+        %div.fb-login-button
+          %a.fb_button.fb_button_medium(href="#{facebookUrl}")
+            %span.fb_button_text Login with Facebook
+      - }else {
+        %div.username
+          %span.label.label-info Hello #{name}
+      - }
 
 %div.container
-    %div.row
-        %div.span8.well
-            %div.row
-                %div.span2
-                    %img(src="/assets/images/pic.jpg")
-                %div.span4
-                    %h3 Kewl thing
-                    %p
-                        really kewl as u can see
-                        %br more bla bla
-                        and even more of this crapy stuff
-                    %p
-                    %h4 price: 43
-                -#%div.span2
-                    -#%iframe.thumbnail(src="/map" width='100%')
+  %div.row
+    %div.span8.well
+      %div.row
+        %div.span2
+          %img(src="/assets/images/pic.jpg")
+        %div.span4
+          %h3 Kewl thing
+          %p
+            really kewl as u can see
+            %br more bla bla
+            and even more of this crapy stuff
+          %p
+          %h4 price: 43
+        -#%div.span2
+            -#%iframe.thumbnail(src="/map" width='100%')
 
 //%script(type="text/javascript" src="assets/javascripts/coffee-script.js")
 //%script(type="text/javascript" src="assets/javascripts/coffeejade.js")
