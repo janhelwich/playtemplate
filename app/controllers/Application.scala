@@ -13,17 +13,13 @@ object Application extends Controller with FacebookAuth {
   val scopes = "email,user_activities"
 
   def index() = Action { implicit request =>
-    if(session.get("user").isEmpty){
-      Redirect(facebookConnectClientUrl)
-    } else {
-      Ok(render("landing.scaml", ('facebookUrl, facebookConnectClientUrl), ('name, session.get("user").get))).withNewSession
-    }
+    Ok(render("landing.scaml", ('facebookUrl -> facebookConnectClientUrl), ('name -> session.get("username").getOrElse(""))))
   }
 
   def facebookauth = authenticate{ result =>
     result match {
       case success: Success => {
-        Redirect("http://janstest.de:9000").withSession(("user", success.fbGraphProperty("name")))
+        Redirect("http://janstest.de:9000").withSession(("username", success.fbGraphProperty("name")))
       }
       case fail: Fail => Unauthorized("Please grant access to our app via facebook")
     }

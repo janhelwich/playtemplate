@@ -4,7 +4,8 @@
     <list default="true" id="a8755348-4b7e-431f-9dc1-ec19690843ae" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.scala" afterPath="$PROJECT_DIR$/app/controllers/Application.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/auth/FacebookAuth.scala" afterPath="$PROJECT_DIR$/app/controllers/auth/FacebookAuth.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/auth/Security.scala" afterPath="$PROJECT_DIR$/app/controllers/auth/Security.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/landing.scaml" afterPath="$PROJECT_DIR$/app/views/landing.scaml" />
     </list>
     <ignored path="trader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +66,7 @@
       <file leaf-file-name="landing.scaml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/landing.scaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="39" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-0.625">
+            <state line="27" column="28" selection-start="857" selection-end="857" vertical-scroll-proportion="-16.875">
               <folding />
             </state>
           </provider>
@@ -74,7 +75,7 @@
       <file leaf-file-name="Application.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="81" selection-start="857" selection-end="857" vertical-scroll-proportion="0.45072114">
+            <state line="15" column="84" selection-start="536" selection-end="536" vertical-scroll-proportion="0.27043268">
               <folding>
                 <element signature="e#21#45#0" expanded="true" />
               </folding>
@@ -82,11 +83,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Action.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Action.scala">
+      <file leaf-file-name="FacebookAuth.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/auth/FacebookAuth.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="67" selection-start="3207" selection-end="3207" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="23" column="6" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#26#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Security.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/auth/Security.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="20" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,13 +117,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/app/views/layouts/default.scaml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/views/landing.scaml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/views/layouts/default.scaml" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/views/landing.scaml" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/mobile.scaml" />
         <option value="$PROJECT_DIR$/app/models/User.scala" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/_main.less" />
         <option value="$PROJECT_DIR$/app/views/layouts/default.scaml" />
@@ -119,11 +132,12 @@
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/project/plugins.sbt" />
         <option value="$PROJECT_DIR$/project/Build.scala" />
-        <option value="$PROJECT_DIR$/app/views/landing.scaml" />
         <option value="$PROJECT_DIR$/app/models/HerokuCompatibles.scala" />
         <option value="$PROJECT_DIR$/app/controllers/HerokuCompatibles.scala" />
         <option value="$PROJECT_DIR$/app/controllers/FacebookAuth.scala" />
         <option value="$PROJECT_DIR$/app/controllers/auth/FacebookAuth.scala" />
+        <option value="$PROJECT_DIR$/app/controllers/auth/Security.scala" />
+        <option value="$PROJECT_DIR$/app/views/landing.scaml" />
         <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
       </list>
     </option>
@@ -306,6 +320,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -684,33 +720,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Security.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="23" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.56850964" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/auth/Security.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="91" selection-start="509" selection-end="509" vertical-scroll-proportion="0.37860578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/HerokuCompatibles.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="49" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.54086536" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/landing.scaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="39" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/Build.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="75" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="61" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" />
@@ -769,23 +778,60 @@
     </entry>
     <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Action.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="67" selection-start="3207" selection-end="3207" vertical-scroll-proportion="0.0">
+        <state line="185" column="6" selection-start="4259" selection-end="4259" vertical-scroll-proportion="0.4871795">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/auth/FacebookAuth.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1858" selection-end="1858" vertical-scroll-proportion="0.8058608">
+        <state line="23" column="6" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#26#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Applications/play-2.0/repository/local/play/play_2.9.1/2.0.2/srcs/play_2.9.1-sources.jar!/play/api/mvc/Security.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="3" selection-start="1777" selection-end="1777" vertical-scroll-proportion="0.42307693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/auth/Security.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/scalate/ScalateIntegration.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="213" selection-end="213" vertical-scroll-proportion="0.072115384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/default.scaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="70" selection-start="774" selection-end="774" vertical-scroll-proportion="0.44554454">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/landing.scaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="28" selection-start="857" selection-end="857" vertical-scroll-proportion="-16.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="81" selection-start="857" selection-end="857" vertical-scroll-proportion="0.45072114">
+        <state line="15" column="84" selection-start="536" selection-end="536" vertical-scroll-proportion="0.27043268">
           <folding>
             <element signature="e#21#45#0" expanded="true" />
           </folding>

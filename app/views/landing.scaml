@@ -3,10 +3,13 @@
 %div.header
     %div.container
         %a.brand Market - your local marketplace
-        %a Hello #{name}
-        %div.fb-login-button
-            %a.fb_button.fb_button_medium(href="#{facebookUrl}")
-                %span.fb_button_text Login with Facebook
+        - if(name.isEmpty){
+            %div.fb-login-button
+                %a.fb_button.fb_button_medium(href="#{facebookUrl}")
+                    %span.fb_button_text Login with Facebook
+        - }else {
+            %a Hello #{name}
+        - }
 
 %div.container
     %div.row
