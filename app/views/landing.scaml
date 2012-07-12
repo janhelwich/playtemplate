@@ -1,17 +1,29 @@
 -@val facebookUrl:String = ""
 -@val name:String = ""
+:javascript
+
 %div.header
   %div.container
-    %a.brand Market - your local marketplace
-    %div.btn-group
-      - if(name.isEmpty){
-        %div.fb-login-button
-          %a.fb_button.fb_button_medium(href="#{facebookUrl}")
-            %span.fb_button_text Login with Facebook
-      - }else {
-        %div.username
-          %span.label.label-info Hello #{name}
-      - }
+    %div.span8
+      %a.brand Market - your local marketplace
+      %div.btn-toolbar(style="align: right")
+        - if(name.isEmpty){
+          %div.fb-login-button
+            %a.fb_button.fb_button_medium(href="#{facebookUrl}")
+              %span.fb_button_text Login with Facebook
+        - } else {
+          %div.user-btn
+            %div.btn-group
+              %a.btn.btn-info{:href => "#"}
+                %i.icon-user.icon-white
+                #{name}
+              %a.btn.btn-info.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "/logout"}
+                    Logout
+        - }
 
 %div.container
   %div.row

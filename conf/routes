@@ -5,6 +5,9 @@
 # Home page
 GET     /                           controllers.Application.index
 
+# Logout
+GET     /logout                     controllers.Application.logout
+
 #page to authenticate via facebook
 GET     /facebookauth               controllers.Application.facebookauth
 

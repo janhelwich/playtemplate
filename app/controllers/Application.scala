@@ -29,6 +29,10 @@ object Application extends Controller with FacebookAuth {
     Ok(render("map.scaml"))
   }
 
+  def logout = Action {
+    Redirect(routes.Application.index()).withNewSession
+  }
+
   def mobile = Action { implicit request =>
     if (UserAgentOf(request).isMobile)
       Ok(render("mobile.scaml"))
