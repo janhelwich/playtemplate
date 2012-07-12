@@ -23,9 +23,9 @@ object Application extends Controller with FacebookAuth {
   def facebookauth = authenticate{ result =>
     result match {
       case success: Success => {
-        Redirect("http://janstest.de:9000").withSession(("user", success.graphResult("name")))
+        Redirect("http://janstest.de:9000").withSession(("user", success.fbGraphProperty("name")))
       }
-      case fail:Fail => Unauthorized("Please grant access to our app via facebook")
+      case fail: Fail => Unauthorized("Please grant access to our app via facebook")
     }
   }
 

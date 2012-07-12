@@ -21,17 +21,6 @@ trait FacebookAuth extends Controller {
     matchOfFBAuth.get.subgroups(0)
   }
 
-  class AuthResult()
-
-  case class Success(val token: String) extends AuthResult() {
-    lazy val graphResult = {
-      val basicInfo = WS.url(facebookGraphUrl + token).get.value.get.body
-      Json.parse[Map[String, String]](basicInfo)
-    }
-  }
-
-  case class Fail() extends AuthResult()
-
   def authenticate(callback: AuthResult => Result) = Action {
     implicit request =>
       if (request.queryString.contains("code")) {
@@ -43,4 +32,14 @@ trait FacebookAuth extends Controller {
       }
   }
 
+  class AuthResult()
+
+  case class Success(val token: String) extends AuthResult() {
+    lazy val fbGraphProperty = {
+      val basicInfo = WS.url(facebookGraphUrl + token).get.value.get.body
+      Json.parse[Map[String, String]](basicInfo)
+    }
+  }
+
+  case class Fail() extends AuthResult()
 }
