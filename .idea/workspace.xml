@@ -91,7 +91,7 @@
       <file leaf-file-name="Application.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="32" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.23497267">
+            <state line="37" column="0" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.28961748">
               <folding>
                 <element signature="e#21#45#0" expanded="true" />
               </folding>
@@ -792,7 +792,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="facebook connect" />
+    <option name="LAST_COMMIT_MESSAGE" value="added photo upload" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -815,6 +815,7 @@
     <MESSAGE value="small change" />
     <MESSAGE value="next facebook connect step" />
     <MESSAGE value="facebook connect" />
+    <MESSAGE value="added photo upload" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -923,7 +924,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="32" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.23497267">
+        <state line="37" column="0" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.28961748">
           <folding>
             <element signature="e#21#45#0" expanded="true" />
           </folding>

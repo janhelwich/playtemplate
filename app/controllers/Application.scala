@@ -34,8 +34,7 @@ object Application extends Controller with FacebookAuth {
     Redirect(routes.Application.index()).withNewSession
   }
 
-  def photouploadPost = Action {
-    implicit request =>
+  def photouploadPost = Action { implicit request =>
       val body: Option[MultipartFormData[TemporaryFile]] = request.body.asMultipartFormData
 
       body.map {
