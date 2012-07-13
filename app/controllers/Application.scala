@@ -2,6 +2,7 @@ package controllers
 
 import auth.FacebookAuth
 import play.api._
+import libs.Files.TemporaryFile
 import mvc._
 import scalate.render
 import useragent.UserAgentOf
@@ -31,6 +32,21 @@ object Application extends Controller with FacebookAuth {
 
   def logout = Action {
     Redirect(routes.Application.index()).withNewSession
+  }
+
+  def photouploadPost = Action {
+    implicit request =>
+      val body: Option[MultipartFormData[TemporaryFile]] = request.body.asMultipartFormData
+
+      body.map {
+        map =>
+          val file = map.files(0)
+//          Pic.create(Pic(file.ref.file))
+          val name = file.ref.file.getName
+          Ok("Saved")
+      }.getOrElse {
+        BadRequest("Expecting form url encoded body")
+      }
   }
 
   def mobile = Action { implicit request =>
