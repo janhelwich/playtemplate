@@ -11,6 +11,14 @@ import play.api.mvc._
 
 class HerokuCompatibles extends Controller {
 
+  //    FOR HEROKU
+  //    almonds.Parse.initialize("cU6TOgwmoP59PZh7DGHJ9TtvVaX03Vj1gNdjldQB", "YqDWNwHaTvkpzA32C1aRBpLHLiXQwqoceH8h2f1S")
+  //    val query = new ParseQuery("Product")
+  //    query.addDescendingOrder("createdAt")
+  //    val o:JSONObject = query.find().get(0).get("image").asInstanceOf[JSONObject]
+  //    val baos = new ByteArrayOutputStream();
+  //    ImageIO.write(ImageIO.read(new URL(o.get("url").toString)), "jpg", baos);
+  //    Ok(baos.toByteArray).as("image/jpeg")
   def herokuCompatibleImageTransformation = Action {
     implicit request =>
       val baos = new ByteArrayOutputStream()
