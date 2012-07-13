@@ -22,7 +22,27 @@
                   %a{:href => "/logout"}
                     Logout
         - }
-
+-#for photo upload
+.container.pad
+  %form#webform{:enctype => "multipart/form-data", :method => "POST"}
+    .rax-backdrop.c25
+      .pad.white.round
+        %h3 Ajax Photo Upload
+        %p Set either height or width to preserve aspect ratio
+        %label Width:
+        %input{:name => "width", :size => "3", :type => "text"}/
+        %br/
+        %label Height:
+        %input{:name => "height", :size => "3", :type => "text"}/
+        %br/
+        %label Photo File:
+        = succeed "&nbsp;" do
+          %input{:name => "userfile", :type => "file"}/
+        %input#btn{:type => "submit", :value => "Upload File", "xt-bind" => "#click,upload"}/
+        %br/
+        %hr/
+        .flashmsg{"xt-autoupdate" => ""}
+        #output1{"xt-autoupdate" => ""}
 %div.container
   %div.row
     %div.span8.well
